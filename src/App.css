@@ -1,0 +1,68 @@
+
+input[type='checkbox'] {
+    display: none;
+}
+
+
+#app-container {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    justify-items: center;
+    margin: 1rem;
+    column-gap: 2.5rem;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='number'] {
+    background-color: #f2f8f8;
+    border-radius: 0.5rem;
+    width: 90%;
+    border: solid 2px #c3f3f1;
+    text-align: right;
+    min-height: 2rem;
+    color: #043836
+}
+
+#tip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.25rem;
+    row-gap: 0.25rem;
+}
+
+#tip h4 {
+    grid-column: span 3;
+}
+
+.tip-button {
+    background-color: #043836;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #c3f3f1;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px #c3f3f1 solid;
+}
+
+.tip-button:hover{
+    background-color: #c3f3f1;
+    color: #043836;
+    border: 1px #043836 solid;
+}
+
+#result-container {
+    width: 75%;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #043836;
+    border-radius: 1rem;
+    color: #c3f3f1;
+    display: grid;
+}
