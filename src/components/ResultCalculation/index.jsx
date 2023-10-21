@@ -1,11 +1,10 @@
 import './ResultCalculation.css'
 function resultCalculation ({bill, tip, people}) {
-
-    const tipPerPerson = (bill * (tip / 100)) / people;
-    console.log('bill = ' + bill);
-    console.log('tip per person = ' + tipPerPerson);
-const totalPerPerson = tipPerPerson + Number(bill/people);
-console.log('total per person = ' + totalPerPerson);
+    const billInPence = bill * 100;
+    const tipPerPerson = ((billInPence * (tip / 100)) / people);
+    const roundedTip = Math.round(tipPerPerson);
+    const totalPerPerson = tipPerPerson + Number(billInPence/people);
+    const roundedtotalPerPerson = Math.round(totalPerPerson);
 
     return (
         <>
@@ -15,7 +14,7 @@ console.log('total per person = ' + totalPerPerson);
                     <p>/person</p>
                 </div>
 
-            <h2>£{tipPerPerson}</h2>
+            <h2>£{roundedTip/100}</h2>
             </div>
 
             <div className='result'>
@@ -23,7 +22,7 @@ console.log('total per person = ' + totalPerPerson);
             <h3>Total</h3>
             <p>/person</p>
             </div>
-            <h2>£{totalPerPerson}</h2>
+            <h2>£{roundedtotalPerPerson/100}</h2>
             </div>
             <div><button id='reset'>Reset</button></div>
         </>

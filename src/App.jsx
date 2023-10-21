@@ -17,6 +17,13 @@ function App() {
     const chooseTip = (e) => {
         setTip(e.target.value);
     }
+
+    const enterBill = e => {
+        let inputBill = Number(e.target.value);
+        let roundedBill = inputBill.toFixed(2);
+        // console.log(roundedBill);
+        return setBill(Number(roundedBill));
+    }
     return (
         <>
             <h1>Tip Splitter</h1>
@@ -25,9 +32,11 @@ function App() {
                     <div id='bill'>
                         <h4>Bill</h4>
                         <input type='number'
+                               min='0'
+                               step='0.10'
                                id='bill-input'
                                placeholder='Enter bill amount'
-                               onChange={e => setBill(e.target.value)}>
+                               onChange={enterBill}>
                         </input>
                         <p>Bill amount = £{bill}</p>
                     </div>
