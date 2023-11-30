@@ -1,7 +1,6 @@
 <h1>Tip Splitter App</h1>
 
-<h2>Live link:</h2> 
-<a href="">Here</a>
+An app that allows you to enter a bill amount, tip percentage and number of people which then calculates the total tip and amount per person.
 
 <h2>Built with:</h2>
 <ul>
